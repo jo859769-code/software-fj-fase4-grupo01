@@ -1,0 +1,71 @@
+====================================================================
+SISTEMA INTEGRAL DE GESTIÓN DE CLIENTES, SERVICIOS Y RESERVAS
+SOFTWARE FJ | FASE 4 - PROGRAMACIÓN 213023
+====================================================================
+
+Operación 01: Registrar cliente válido
+  CORRECTO: Cliente #1: Ana Gómez (documento ****3456)
+  Fin de la operación.
+
+Operación 02: Registrar cliente con correo inválido
+  ERROR CONTROLADO: ClienteInvalidoError: Correo electrónico no válido: 'luis-correo'
+  Fin de la operación.
+
+Operación 03: Registrar cliente con documento inválido
+  ERROR CONTROLADO: ClienteInvalidoError: El documento debe tener entre 6 y 12 dígitos.
+  Fin de la operación.
+
+Operación 04: Crear una sala de reuniones válida
+  CORRECTO: Sala 'Sala Andes' (12 personas) - $80,000/hora
+  Fin de la operación.
+
+Operación 05: Crear equipo con tarifa negativa
+  ERROR CONTROLADO: ServicioInvalidoError: La tarifa base debe ser un número finito mayor que cero.
+  Fin de la operación.
+
+Operación 06: Crear equipo y asesoría válidos
+  CORRECTO: Equipo 'Portátil' - $45,000/día (5 unidades) | Asesoría 'Python POO' nivel avanzada - $120,000/hora
+  Fin de la operación.
+
+Operación 07: Crear, confirmar y procesar reserva de sala (3 h + IVA)
+  CORRECTO: Reserva #8: Ana Gómez -> Sala Andes x 3 | [PROCESADA] | Total: $285,600.00 | Total calculado: $285,600.00
+  Fin de la operación.
+
+Operación 08: Crear, confirmar y procesar asesoría con descuento
+  CORRECTO: Reserva #9: Ana Gómez -> Python POO x 2 | [PROCESADA] | Total: $385,560.00 | Total calculado: $385,560.00
+  Fin de la operación.
+
+Operación 09: Intentar reserva de sala durante 12 horas
+  ERROR CONTROLADO: ReservaInvalidaError: La duración o cantidad de la reserva no es válida para 'Sala Andes'. | Causa original: Una sala se reserva entre 1 y 8 horas.
+  Fin de la operación.
+
+Operación 10: Intentar reservar equipo no disponible
+  ERROR CONTROLADO: ServicioNoDisponibleError: 'Portátil' no está disponible.
+  Fin de la operación.
+
+Operación 11: Intentar cancelar reserva ya procesada
+  ERROR CONTROLADO: OperacionNoPermitidaError: No se puede cancelar una reserva ya procesada.
+  Fin de la operación.
+
+Operación 12: Intentar crear reserva sin objeto Cliente
+  ERROR CONTROLADO: ReservaInvalidaError: La reserva requiere un objeto Cliente válido.
+  Fin de la operación.
+
+Operación 13: Procesar reserva con porcentaje de impuesto inválido
+  ERROR CONTROLADO: ReservaInvalidaError: No se pudo procesar la reserva #13. | Causa original: El impuesto debe expresarse como fracción entre 0 y 1.
+  Fin de la operación.
+
+Operación 14: Mostrar resumen final
+
+--- RESUMEN DEL SISTEMA ---
+Clientes registrados: 1
+Servicios registrados: 3
+Reservas almacenadas: 3
+ - Reserva #8: Ana Gómez -> Sala Andes x 3 | [PROCESADA] | Total: $285,600.00
+ - Reserva #9: Ana Gómez -> Python POO x 2 | [PROCESADA] | Total: $385,560.00
+ - Reserva #13: Ana Gómez -> Sala Andes x 2 | [CONFIRMADA] | Total: sin calcular
+  CORRECTO: Resumen generado.
+  Fin de la operación.
+
+La simulación finalizó. Los errores controlados fueron registrados en logs/software_fj.log.
+

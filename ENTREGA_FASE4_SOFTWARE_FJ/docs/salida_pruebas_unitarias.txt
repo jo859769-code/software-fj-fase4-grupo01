@@ -1,0 +1,13 @@
+test_calculo_con_descuento_e_iva (test_sistema.TestSistemaSoftwareFJ.test_calculo_con_descuento_e_iva) ... ok
+test_calculo_sala_con_iva (test_sistema.TestSistemaSoftwareFJ.test_calculo_sala_con_iva) ... ok
+test_cliente_enmascara_documento (test_sistema.TestSistemaSoftwareFJ.test_cliente_enmascara_documento) ... ok
+test_correo_invalido (test_sistema.TestSistemaSoftwareFJ.test_correo_invalido) ... ok
+test_duracion_invalida_se_encadena (test_sistema.TestSistemaSoftwareFJ.test_duracion_invalida_se_encadena) ... ok
+test_no_cancelar_reserva_procesada (test_sistema.TestSistemaSoftwareFJ.test_no_cancelar_reserva_procesada) ... ok
+test_reserva_ciclo_de_vida (test_sistema.TestSistemaSoftwareFJ.test_reserva_ciclo_de_vida) ... ok
+test_servicio_no_disponible (test_sistema.TestSistemaSoftwareFJ.test_servicio_no_disponible) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
